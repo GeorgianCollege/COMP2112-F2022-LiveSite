@@ -1,7 +1,7 @@
 frontend:
   phases:
     build:
-      commands: []
+      - yarn install
   artifacts:
     baseDirectory: /
     files:
