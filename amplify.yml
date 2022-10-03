@@ -1,3 +1,11 @@
-cache:
-        paths:
-            - 'node_modules/**/*'
+frontend:
+  phases:
+    build:
+      commands: []
+  artifacts:
+    baseDirectory: /
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - 'node_modules/**/*'
