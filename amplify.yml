@@ -6,9 +6,9 @@ frontend:
         - yarn install
     build:
       commands:
-        - yarn run build
+        - if [ "${AWS_BRANCH}" = "main" ]; then echo "main branch"; fi
   artifacts:
-    baseDirectory: build
+    baseDirectory: /
     files:
       - '**/*'
   cache:
