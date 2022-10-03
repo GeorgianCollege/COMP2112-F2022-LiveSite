@@ -2,6 +2,7 @@
 //IIFE -- Immediately Invoked Function Expression
 // AKA - Self Executing Function 
 (function () {
+    let baseSiteURL = "https://georgiancollege.github.io/COMP2112-F2022-LiveSite/";
     /**
      * This method saves our data to localStorage
      *
@@ -37,7 +38,7 @@
      */
     function LoadHeader() {
         console.log("Loading Header...");
-        $.get("./Views/components/header.html", function (html_data) {
+        $.get(baseSiteURL + "/Views/components/header.html", function (html_data) {
             $("header").html(html_data);
             // Activate the Home Link on initial load
             $("li>a#Home").addClass("active");
@@ -63,7 +64,7 @@
     function LoadContent() {
         console.log("Loading Content...");
         let contentLink = document.title.toLowerCase();
-        $.get("./Views/content/" + contentLink + ".html", function (html_data) {
+        $.get(baseSiteURL + "/Views/content/" + contentLink + ".html", function (html_data) {
             $("main").html(html_data);
         });
     }
@@ -73,7 +74,7 @@
      */
     function LoadFooter() {
         console.log("Loading Footer...");
-        $.get("./Views/components/footer.html", function (html_data) {
+        $.get(baseSiteURL + "/Views/components/footer.html", function (html_data) {
             $("footer").html(html_data);
         });
     }
